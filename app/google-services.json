@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "482607608909",
+    "project_id": "pushnotificationapp-baca5",
+    "storage_bucket": "pushnotificationapp-baca5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482607608909:android:53a38139d98192481d9804",
+        "android_client_info": {
+          "package_name": "com.example.push_notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482607608909-0cnej8t28tni5qugvektfm98m9rc70pc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.push_notification",
+            "certificate_hash": "e3a64b86e30eb5d5dd1076a8fed9721d447471a6"
+          }
+        },
+        {
+          "client_id": "482607608909-2cghbae6qpqqv3gfoijb5q5nplkqo30o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWLgBsSWn5MuycYDrSLLYjAUmTggMDhN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482607608909-2cghbae6qpqqv3gfoijb5q5nplkqo30o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
