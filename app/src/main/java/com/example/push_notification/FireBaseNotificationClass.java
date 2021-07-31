@@ -1,6 +1,7 @@
 package com.example.push_notification;
 
 import android.app.NotificationChannelGroup;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -15,24 +16,26 @@ public class FireBaseNotificationClass  extends FirebaseMessagingService
         super();
     }
 
-
     @Override
     public void onMessageReceived(@NonNull  RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
-       String body= remoteMessage.getNotification().getBody().toString();
-        String title= remoteMessage.getNotification().getTitle().toString();
-        String image =remoteMessage.getNotification().getImageUrl().toString();
-
+        String body= remoteMessage.getNotification().getBody();
+        String title= remoteMessage.getNotification().getTitle();
 
         NotificationHelper helper = new NotificationHelper(this);
-//        helper.triggerNotificatio(title,body);
 
-        helper.triggerNotificatio(title,body,image);
+        if (remoteMessage.getNotification().getImageUrl() == null || remoteMessage.getNotification().getImageUrl().toString().equalsIgnoreCase("null") || remoteMessage.getNotification().getImageUrl().toString().equalsIgnoreCase(""))
+        {
+            helper.triggerNotificatio(title,body);
 
 
 
-
+        }else
+        {
+            String image =remoteMessage.getNotification().getImageUrl().toString();
+            helper.triggerNotificatio(title,body,image);
+        }
 
 
     }
